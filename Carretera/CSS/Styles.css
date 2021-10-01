@@ -1,0 +1,78 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+height: 100vw;
+width: 100vw;
+}
+
+.main-container{
+display: grid;
+grid-template-columns: 100px 400px 100px  300px 100px;
+grid-template-rows: 100px 800px 100px;
+grid-template-areas: "leftstreet leftspace centerstreet upstreet rightstreet"
+"leftstreet leftspace centerstreet rightspace rightstreet"
+"leftstreet downstreet centerstreet rightspace rightstreet"
+;
+    height: 1000px;
+    width: 1000px;
+background-color: darkgray;
+}
+
+.vertical{
+    flex-direction: column;
+}
+
+
+.main-container > div {
+    display: flex;
+}
+
+.main-container > img {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    width: 10px;
+}
+
+.leftstreet{
+    grid-area: leftstreet;
+}
+.leftspace{
+    grid-area: leftspace;
+}
+.centerstreet{
+grid-area: centerstreet;
+
+}
+.downstreet{
+    grid-area: downstreet;
+}
+.upstreet{
+grid-area: upstreet;
+
+}
+.rightspace{
+    grid-area: rightspace;
+}
+.rightstreet{
+
+    grid-area: rightstreet;
+}
+
+.Img-Container{
+    display: flex;
+    position: relative;
+}
+.Img-Container:hover .Img-tank{
+    display: block;
+}
+.Img-tank{
+    display: none;
+    position:absolute;
+    top: 0;
+    left:0;
+}
